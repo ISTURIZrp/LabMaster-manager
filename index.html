@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head><title>Dashboard - LabMaster Manager</title></head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LabMaster Manager - Dashboard</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
 <body>
-  <h1>Bienvenido a LabMaster Manager</h1>
-  <nav>
-    <a href="shipments.html">Control de Envíos</a> |
-    <a href="suppliers.html">Proveedores</a> |
-    <a href="brands.html">Marcas</a> |
-    <a href="users.html">Usuarios</a>
-  </nav>
+  <header>
+    <h1>LabMaster Manager</h1>
+    <nav>
+      <ul>
+        <li><a href="entradas.html">Entradas</a></li>
+        <li><a href="salidas.html">Salidas</a></li>
+        <li><a href="envios.html">Envíos</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="reportes.html">Reportes</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="login.html">Salir</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>Resumen General</h2>
+      <div class="card">Inventario Total: <span id="totalInventario">0</span></div>
+      <div class="card">Alertas Activas: <span id="alertasActivas">0</span></div>
+      <div class="card">Equipos en Mantenimiento: <span id="equiposMantenimiento">0</span></div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
