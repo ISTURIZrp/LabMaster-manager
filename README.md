@@ -13,5 +13,3 @@ LabMaster Manager es un sistema de gestión para laboratorios de procesamiento c
 HTML, CSS, JavaScript.
 
 ## Acceso
-Usuario: ISTURIZ  
-Contraseña: EDELMIRA89
