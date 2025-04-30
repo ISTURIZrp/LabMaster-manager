@@ -1,1 +1,24 @@
-<!-- Registro de entradas -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entradas - LabMaster</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Entradas</h1>
+  </header>
+  <main>
+    <form id="form-entrada">
+      <input type="text" id="nombre" placeholder="Nombre del producto" required>
+      <input type="text" id="lote" placeholder="Lote" required>
+      <input type="number" id="cantidad" placeholder="Cantidad" required>
+      <input type="date" id="caducidad" required>
+      <button type="submit">Registrar Entrada</button>
+    </form>
+    <div id="lista-entradas"></div>
+  </main>
+  <script src="js/entradas.js"></script>
+</body>
+</html>
