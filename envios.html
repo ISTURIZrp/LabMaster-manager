@@ -1,1 +1,25 @@
-<!-- Envío de muestras celulares -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Envíos - LabMaster</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Envío de Muestras Celulares</h1>
+  </header>
+  <main>
+    <form id="form-envio">
+      <input type="text" id="paciente" placeholder="Nombre del paciente" required>
+      <input type="text" id="producto" placeholder="Producto enviado" required>
+      <input type="number" id="volumen" placeholder="Volumen (ml)" required>
+      <input type="number" id="celulas" placeholder="Millones de células" required>
+      <input type="date" id="fecha" required>
+      <button type="submit">Registrar Envío</button>
+    </form>
+    <div id="lista-envios"></div>
+  </main>
+  <script src="js/envios.js"></script>
+</body>
+</html>
