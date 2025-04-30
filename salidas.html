@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Salidas - LabMaster</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Salidas</h1>
+  </header>
+  <main>
+    <form id="form-salida">
+      <input type="text" id="lote" placeholder="Lote del producto" required>
+      <input type="number" id="cantidad" placeholder="Cantidad a retirar" required>
+      <button type="submit">Registrar Salida</button>
+    </form>
+    <div id="lista-salidas"></div>
+  </main>
+  <script src="js/salidas.js"></script>
+</body>
+</html>
