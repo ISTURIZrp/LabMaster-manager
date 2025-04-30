@@ -1,1 +1,27 @@
-<!-- users page HTML -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Usuarios - LabMaster</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Usuarios</h1>
+  </header>
+  <main>
+    <form id="form-usuario">
+      <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+      <input type="password" id="clave" placeholder="Contraseña" required>
+      <select id="rol">
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="lector">Lector</option>
+      </select>
+      <button type="submit">Agregar Usuario</button>
+    </form>
+    <div id="lista-usuarios"></div>
+  </main>
+  <script src="js/usuarios.js"></script>
+</body>
+</html>
