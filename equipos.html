@@ -1,1 +1,24 @@
-<!-- Control de equipos -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Equipos - LabMaster</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Equipos</h1>
+  </header>
+  <main>
+    <form id="form-equipo">
+      <input type="text" id="nombre" placeholder="Nombre del equipo" required>
+      <input type="text" id="tipo" placeholder="Tipo" required>
+      <input type="number" id="uso" placeholder="Horas de uso" required>
+      <input type="date" id="mantenimiento" required>
+      <button type="submit">Registrar Equipo</button>
+    </form>
+    <div id="lista-equipos"></div>
+  </main>
+  <script src="js/equipos.js"></script>
+</body>
+</html>
