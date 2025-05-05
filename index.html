@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LabMaster Manager - Dashboard</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -15,21 +16,69 @@
         <li><a href="envios.html">Envíos</a></li>
         <li><a href="equipos.html">Equipos</a></li>
         <li><a href="reportes.html">Reportes</a></li>
-        <li><a href="usuarios.html">Usuarios</a></li>
-        <li><a href="login.html">Salir</a></li>
+        <li><a href="users.html">Usuarios</a></li>
+        <li><a href="#" id="logout">Salir</a></li>
       </ul>
     </nav>
+    <p class="home-indicator">Estás en el Menú Principal</p>
   </header>
 
   <main>
     <section id="dashboard">
       <h2>Resumen General</h2>
-      <div class="card">Inventario Total: <span id="totalInventario">0</span></div>
-      <div class="card">Alertas Activas: <span id="alertasActivas">0</span></div>
-      <div class="card">Equipos en Mantenimiento: <span id="equiposMantenimiento">0</span></div>
+      <div class="cards-container">
+        <div class="card">
+          <span class="card-label">Inventario Total:</span>
+          <span id="totalInventario" aria-live="polite">0</span>
+        </div>
+        <div class="card">
+          <span class="card-label">Alertas Activas:</span>
+          <span id="alertasActivas" aria-live="polite">0</span>
+        </div>
+        <div class="card">
+          <span class="card-label">Equipos en Mantenimiento:</span>
+          <span id="equiposMantenimiento" aria-live="polite">0</span>
+        </div>
+      </div>
+
+      <div class="form-container">
+        <h3>Agregar Lote</h3>
+        <form id="batch-form" novalidate>
+          <div class="form-group">
+            <label for="lot-input">Lote:</label>
+            <input type="text" id="lot-input" name="lot" placeholder="Ej. ABC123" required aria-required="true">
+            <span id="lot-error" class="error-message" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="expiry-input">Fecha de Caducidad:</label>
+            <input type="date" id="expiry-input" name="expiry" required aria-required="true">
+            <span id="expiry-error" class="error-message" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="quantity-input">Cantidad:</label>
+            <input type="number" id="quantity-input" name="quantity" placeholder="Ej. 100" min="1" required aria-required="true">
+            <span id="quantity-error" class="error-message" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn-submit">Agregar</button>
+        </form>
+      </div>
+
+      <div class="inventory-container">
+        <h3>Inventario</h3>
+        <button id="export-csv" class="btn-secondary">Exportar a CSV</button>
+        <div id="batch-list" aria-live="polite"></div>
+      </div>
+
+      <div class="alerts-container">
+        <h3>Alertas</h3>
+        <div id="alerts" aria-live="polite"></div>
+      </div>
     </section>
   </main>
 
-  <script src="js/main.js"></script>
+  <script src="Js/inventory.js"></script>
+  <script src="Js/users.js"></script>
+  <script src="Js/export.js"></script>
+  <script src="Js/Main.js"></script>
 </body>
 </html>
